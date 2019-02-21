@@ -9,7 +9,7 @@ import (
 
 // HandlerFunc instruments http.HandlerFunc with total requests, duration and request & response sizes.
 func HandlerFunc(h http.HandlerFunc) http.HandlerFunc {
-	return InstrumentHandler(h).ServeHTTP
+	return Handler(h).ServeHTTP
 }
 
 // Handler instruments http.Handler with total requests, duration and request & response sizes.
